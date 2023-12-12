@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 1705477027540029343}
   - component: {fileID: 6710798012565612762}
   - component: {fileID: 4003265706399540403}
+  - component: {fileID: 9139427488206760297}
   m_Layer: 6
   m_Name: TSlingshot
   m_TagString: Untagged
@@ -151,6 +152,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4711043170abe0f4c9fa4d4681122e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mCamera: {fileID: 0}
+  smoothSpeedScale: 2
+  horizontalRange: {x: -16, y: 48}
+--- !u!114 &9139427488206760297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212226999460610026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5707edf6285abe4b8815bdc7b2ec9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &291712861714282380
