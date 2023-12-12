@@ -127,6 +127,7 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
     {
         state = TBirdState.BeforeShoot;
         transform.position = TSlingshot.Instance.origin.position;
+        TFollowTarget.Instance.SetTarget(transform);
     }
 
     private void CalculateVelocity()

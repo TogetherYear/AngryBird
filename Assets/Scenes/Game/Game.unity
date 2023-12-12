@@ -1501,6 +1501,18 @@ PrefabInstance:
       propertyPath: mCamera
       value: 
       objectReference: {fileID: 519420032}
+    - target: {fileID: 4003265706399540403, guid: c839ea3ec9c6620428dfc62b97fd57b1, type: 3}
+      propertyPath: smoothTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003265706399540403, guid: c839ea3ec9c6620428dfc62b97fd57b1, type: 3}
+      propertyPath: horizontalRange.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003265706399540403, guid: c839ea3ec9c6620428dfc62b97fd57b1, type: 3}
+      propertyPath: horizontalRange.y
+      value: 48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
