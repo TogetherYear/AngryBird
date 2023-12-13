@@ -169,6 +169,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5707edf6285abe4b8815bdc7b2ec9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePrefab: {fileID: 5122211695375491151, guid: d5cdc74de1984524884a132c107d4124, type: 3}
+  sprites3000:
+  - {fileID: 256070249, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: -2135878351, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: -1009478776, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  sprites10000:
+  - {fileID: 1630753049, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: 230222861, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: 155101085, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: 988058973, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: -843959170, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: 85478990, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
+  - {fileID: -77253300, guid: e70ad29b69315474fbf5a38021d8add6, type: 3}
 --- !u!1 &291712861714282380
 GameObject:
   m_ObjectHideFlags: 0

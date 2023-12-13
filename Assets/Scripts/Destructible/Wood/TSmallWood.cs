@@ -4,5 +4,15 @@ using UnityEngine;
 
 public class TSmallWood : TDestructible
 {
+    public override void OnExceedDamage()
+    {
+        base.OnExceedDamage();
+        TAudioManager.Instance.PlayAudio(TAudioType.WoodCollision, transform.position);
+    }
 
+    public override void Death()
+    {
+        base.Death();
+        TAudioManager.Instance.PlayAudio(TAudioType.WoodDestroyed, transform.position);
+    }
 }

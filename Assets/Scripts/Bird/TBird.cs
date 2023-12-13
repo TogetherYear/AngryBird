@@ -85,6 +85,7 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
         float scale = Vector3.Distance(TSlingshot.Instance.origin.position, transform.position) / TSlingshot.Instance.maxDistance;
         rb.velocity = (TSlingshot.Instance.origin.position - transform.position).normalized * flySpeed * scale;
         state = TBirdState.AfterShoot;
+        TAudioManager.Instance.PlayAudio(TAudioType.BirdFlying, transform.position);
     }
 
     public void OnDrag(PointerEventData e)
@@ -128,6 +129,7 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
         state = TBirdState.BeforeShoot;
         transform.position = TSlingshot.Instance.origin.position;
         TFollowTarget.Instance.SetTarget(transform);
+        TAudioManager.Instance.PlayAudio(TAudioType.BirdSelect, transform.position);
     }
 
     private void CalculateVelocity()
@@ -153,6 +155,15 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
             GameObject boom = Instantiate(boomPrefab, transform.position, Quaternion.identity);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (state == TBirdState.AfterShoot && other.relativeVelocity.magnitude > 8.0f)
+        {
+            TAudioManager.Instance.PlayAudio(TAudioType.BirdCollision, transform.position);
+        }
+    }
+
 }
 
 

@@ -20,6 +20,13 @@ public class TDestructible : MonoBehaviour
 
     private int currentInjuredIndex;
 
+    public int type = 3000;
+
+    protected virtual void Awake()
+    {
+
+    }
+
     private void Start()
     {
         currentHP = maxHP;
@@ -72,11 +79,12 @@ public class TDestructible : MonoBehaviour
     public virtual void Death()
     {
         GenerateBoom();
+        OnExceedDamage();
         Destroy(gameObject);
     }
 
     public virtual void OnExceedDamage()
     {
-
+        TScorePopup.Instance.GenerateScore(transform.position, type);
     }
 }

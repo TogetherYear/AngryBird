@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 6724203998722720487}
   - component: {fileID: 234386607524114727}
   - component: {fileID: 6469844429294856265}
+  - component: {fileID: 662469414336873942}
   - component: {fileID: 5175177604209356823}
   - component: {fileID: 7486294159902868544}
   - component: {fileID: 1806680154986548375}
@@ -181,6 +182,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d7f3374bee7624dbc71a89aee88d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &662469414336873942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416651953471647503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e6b350c870836499b19a9eef8ad58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  birdCollision:
+  - {fileID: 8300000, guid: 32b5cb2ec3029484eb0a71e43bd697e0, type: 3}
+  birdSelect:
+  - {fileID: 8300000, guid: 3641c9435ad52ea429348437c2742cdb, type: 3}
+  birdFlying:
+  - {fileID: 8300000, guid: 65774e057815a5e4fa70215e9acad616, type: 3}
+  woodCollision:
+  - {fileID: 8300000, guid: 53dea70923c95cb45864ff65eeb38785, type: 3}
+  woodDestroyed:
+  - {fileID: 8300000, guid: f7872a240c3a867458646a6a01dde6a2, type: 3}
 --- !u!95 &5175177604209356823
 Animator:
   serializedVersion: 5
