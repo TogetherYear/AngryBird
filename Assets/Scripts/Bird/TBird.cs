@@ -9,6 +9,7 @@ public enum TBirdState
     Waiting,
     BeforeShoot,
     AfterShoot,
+    Flying,
     Death,
 }
 
@@ -25,13 +26,19 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
     private bool isFocus = false;
 
     [SerializeField]
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     public float flySpeed = 15.0f;
 
     public float offset = 0.1f;
 
     public float angularDrag = 10.0f;
+
+    private bool isCollision = false;
+
+    private bool isFlySkill = false;
+
+    private bool isCollisionSkill = false;
 
     [SerializeField]
     private GameObject boomPrefab;
@@ -53,6 +60,7 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
             case TBirdState.Waiting: OnWaiting(); return;
             case TBirdState.BeforeShoot: OnBeforeShoot(); return;
             case TBirdState.AfterShoot: OnAfterShoot(); return;
+            case TBirdState.Flying: OnFlying(); return;
             default: return;
         }
     }
@@ -68,11 +76,54 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
     public virtual void OnBeforeShoot() { }
 
     /// <summary>
-    /// 飞出弹弓
+    /// 飞出弹弓 只有一瞬间
     /// </summary>
     public virtual void OnAfterShoot()
     {
+        state = TBirdState.Flying;
+    }
+
+    /// <summary>
+    /// 飞行中
+    /// </summary>
+    public virtual void OnFlying()
+    {
         CalculateVelocity();
+        SkillControl();
+    }
+
+    private void SkillControl()
+    {
+        if (Input.touchCount != 0)
+        {
+            if (isCollision)
+            {
+                if (!isCollisionSkill)
+                {
+                    CollisionSkillControl();
+                    isCollisionSkill = true;
+                }
+
+            }
+            else
+            {
+                if (!isFlySkill)
+                {
+                    FlyingSkillControl();
+                    isFlySkill = true;
+                }
+            }
+        }
+    }
+
+    protected virtual void FlyingSkillControl()
+    {
+
+    }
+
+    protected virtual void CollisionSkillControl()
+    {
+
     }
 
     /// <summary>
@@ -158,6 +209,7 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        isCollision = true;
         if (state == TBirdState.AfterShoot && other.relativeVelocity.magnitude > 8.0f)
         {
             TAudioManager.Instance.PlayAudio(TAudioType.BirdCollision, transform.position);

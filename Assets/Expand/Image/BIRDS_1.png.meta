@@ -1606,13 +1606,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BIRDS_1_81
+      name: RotateBird
       rect:
         serializedVersion: 2
         x: 816
-        y: 282
-        width: 187
-        height: 162
+        y: 284
+        width: 99
+        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1900,13 +1900,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BIRDS_1_96
+      name: ExplodeBird
       rect:
         serializedVersion: 2
         x: 634
-        y: 153
-        width: 62
-        height: 127
+        y: 209
+        width: 63
+        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2551,7 +2551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BIRDS_1_127
+      name: AccelerateBird
       rect:
         serializedVersion: 2
         x: 634
@@ -3506,6 +3506,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      AccelerateBird: -650332122
       BIRDS_1_1: -1682800177
       BIRDS_1_10: -152675709
       BIRDS_1_100: 1912970520
@@ -3537,7 +3538,6 @@ TextureImporter:
       BIRDS_1_124: 1300499957
       BIRDS_1_125: 1471913339
       BIRDS_1_126: -430607204
-      BIRDS_1_127: -650332122
       BIRDS_1_128: 751069050
       BIRDS_1_129: 2146573085
       BIRDS_1_13: -403939308
@@ -3643,7 +3643,6 @@ TextureImporter:
       BIRDS_1_78: -1755944402
       BIRDS_1_79: -1820373083
       BIRDS_1_80: 39148848
-      BIRDS_1_81: -2099829543
       BIRDS_1_82: 552860661
       BIRDS_1_83: 1585981835
       BIRDS_1_87: -1961554643
@@ -3655,7 +3654,6 @@ TextureImporter:
       BIRDS_1_93: 1349154923
       BIRDS_1_94: 1411836187
       BIRDS_1_95: -465044659
-      BIRDS_1_96: 627072370
       BIRDS_1_97: -255888604
       BIRDS_1_98: 864741061
       BIRDS_1_99: 629188009
@@ -3668,6 +3666,7 @@ TextureImporter:
       Boom7: 72341397
       DefaultBird: -1787137388
       Empty: 93822728
+      ExplodeBird: 627072370
       Pig1_1: -1544380876
       Pig1_2: -322030065
       Pig1_3: 2004633548
@@ -3677,6 +3676,7 @@ TextureImporter:
       Pig2_3: 1361319878
       Pig2_4: -668700493
       RedBird: 928937956
+      RotateBird: -2099829543
       Slingshot_Left: -897387781
       Slingshot_Right: -1978770530
   mipmapLimitGroupName: 
