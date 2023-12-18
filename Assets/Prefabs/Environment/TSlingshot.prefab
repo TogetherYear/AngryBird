@@ -141,7 +141,7 @@ MonoBehaviour:
   leftOrigin: {fileID: 2115423039829988553}
   rightOrigin: {fileID: 3237369746885199838}
   origin: {fileID: 1046696499272307915}
-  maxDistance: 1.6
+  maxDistance: 1
 --- !u!114 &4003265706399540403
 MonoBehaviour:
   m_ObjectHideFlags: 0

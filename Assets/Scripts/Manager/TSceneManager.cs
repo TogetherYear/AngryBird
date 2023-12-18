@@ -71,7 +71,7 @@ public class TSceneManager : TSingleton<TSceneManager>
                 }
                 else
                 {
-                    if (Input.touchCount != 0)
+                    if (TExtensionTool.IsUserHold())
                     {
                         load.allowSceneActivation = true;
                         yield return null;

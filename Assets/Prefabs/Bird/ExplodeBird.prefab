@@ -137,6 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   rb: {fileID: 7792624540620667313}
+  cd: {fileID: 8198486767995268768}
   flySpeed: 20
   offset: 0.3
   angularDrag: 3

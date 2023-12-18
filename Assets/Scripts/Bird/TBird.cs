@@ -94,7 +94,7 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
 
     private void SkillControl()
     {
-        if (Input.touchCount != 0)
+        if (TExtensionTool.IsUserHold())
         {
             if (isCollision)
             {
@@ -127,9 +127,9 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
     }
 
     /// <summary>
-    /// 飞行
+    /// 发射
     /// </summary>
-    public virtual void Fly()
+    public virtual void Shoot()
     {
         rb.bodyType = RigidbodyType2D.Dynamic;
         rb.angularDrag = angularDrag;
@@ -171,7 +171,7 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
         {
             isFocus = false;
             TSlingshot.Instance.EndDraw();
-            Fly();
+            Shoot();
         }
     }
 
@@ -209,10 +209,13 @@ public class TBird : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerU
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        isCollision = true;
-        if (state == TBirdState.AfterShoot && other.relativeVelocity.magnitude > 8.0f)
+        if (state == TBirdState.Flying)
         {
-            TAudioManager.Instance.PlayAudio(TAudioType.BirdCollision, transform.position);
+            isCollision = true;
+            if (other.relativeVelocity.magnitude > 8.0f)
+            {
+                TAudioManager.Instance.PlayAudio(TAudioType.BirdCollision, transform.position);
+            }
         }
     }
 
