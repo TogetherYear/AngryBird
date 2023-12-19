@@ -24,7 +24,10 @@ public class TExplodeBird : TBird
             if (d)
             {
                 Rigidbody2D rb = d.GetComponent<Rigidbody2D>();
-                rb.AddForce((c.transform.position - transform.position).normalized * forceScale, ForceMode2D.Impulse);
+                if (rb)
+                {
+                    rb.AddForce((c.transform.position - transform.position).normalized * forceScale, ForceMode2D.Impulse);
+                }
             }
         }
     }
