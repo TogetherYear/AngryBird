@@ -137,11 +137,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   rb: {fileID: 7792624540620667313}
-  cd: {fileID: 8198486767995268768}
-  flySpeed: 20
+  flySpeed: 12
   offset: 0.3
   angularDrag: 3
   boomPrefab: {fileID: 4399571896159992294, guid: b9709213836144c4f9f276aa3174402c, type: 3}
+  boomRadius: 2.5
+  forceScale: 20
 --- !u!50 &7792624540620667313
 Rigidbody2D:
   serializedVersion: 4

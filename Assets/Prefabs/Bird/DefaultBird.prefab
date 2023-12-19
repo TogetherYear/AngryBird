@@ -137,8 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   rb: {fileID: 5656060891698579800}
-  cd: {fileID: 6202302732052257544}
-  flySpeed: 20
+  flySpeed: 12
   offset: 0.2
   angularDrag: 3
   boomPrefab: {fileID: 4399571896159992294, guid: b9709213836144c4f9f276aa3174402c, type: 3}
