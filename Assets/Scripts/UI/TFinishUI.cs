@@ -8,22 +8,23 @@ public class TFinishUI : MonoBehaviour
     private Animator at;
 
     [SerializeField]
-    private CanvasGroup leftStart;
+    private CanvasGroup[] starts;
 
-    [SerializeField]
-    private CanvasGroup midStart;
-
-    [SerializeField]
-    private CanvasGroup rightStart;
-
-    public void Success()
+    private void Start()
     {
+        Invoke("Failed", 2.0f);
+    }
+
+    public void Success(int number)
+    {
+        at.SetInteger("Number", number);
         at.SetBool("Success", true);
     }
 
     public void Failed()
     {
-        at.SetBool("Success", false);
+        // at.SetBool("Failed", true);
+        Success(2);
     }
 
     public void OnRefreshClick()

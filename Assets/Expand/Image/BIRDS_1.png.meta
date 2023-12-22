@@ -2446,7 +2446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BIRDS_1_122
+      name: Failed
       rect:
         serializedVersion: 2
         x: 545
@@ -3533,7 +3533,6 @@ TextureImporter:
       BIRDS_1_12: 638060066
       BIRDS_1_120: 897577854
       BIRDS_1_121: 883126229
-      BIRDS_1_122: -30071481
       BIRDS_1_123: 592487192
       BIRDS_1_124: 1300499957
       BIRDS_1_125: 1471913339
@@ -3667,6 +3666,7 @@ TextureImporter:
       DefaultBird: -1787137388
       Empty: 93822728
       ExplodeBird: 627072370
+      Failed: -30071481
       Pig1_1: -1544380876
       Pig1_2: -322030065
       Pig1_3: 2004633548
