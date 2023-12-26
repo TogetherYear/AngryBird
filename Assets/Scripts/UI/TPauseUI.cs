@@ -11,23 +11,23 @@ public class TPauseUI : MonoBehaviour
     public void OnPauseClick()
     {
         at.SetBool("Show", true);
-        Time.timeScale = 0.0f;
+        TGameManager.Instance.SetTimeScale(0.0f);
     }
 
     public void OnPlayClick()
     {
         at.SetBool("Show", false);
-        Time.timeScale = 1.0f;
+        TGameManager.Instance.SetTimeScale(1.0f);
     }
 
     public void OnRefreshClick()
     {
-
+        TGameManager.Instance.RefreshCurrentLevel();
     }
 
     public void OnLevelClick()
     {
-
+        TGameManager.Instance.LoadMenuLevel();
     }
 
 }

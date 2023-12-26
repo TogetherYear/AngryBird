@@ -10,11 +10,6 @@ public class TFinishUI : MonoBehaviour
     [SerializeField]
     private CanvasGroup[] starts;
 
-    private void Start()
-    {
-        Invoke("Failed", 2.0f);
-    }
-
     public void Success(int number)
     {
         at.SetInteger("Number", number);
@@ -23,22 +18,21 @@ public class TFinishUI : MonoBehaviour
 
     public void Failed()
     {
-        // at.SetBool("Failed", true);
-        Success(2);
+        at.SetBool("Failed", true);
     }
 
     public void OnRefreshClick()
     {
-
+        TGameManager.Instance.RefreshCurrentLevel();
     }
 
     public void OnLevelClick()
     {
-
+        TGameManager.Instance.LoadMenuLevel();
     }
 
     public void OnNextClick()
     {
-
+        TGameManager.Instance.LoadNextLevel();
     }
 }

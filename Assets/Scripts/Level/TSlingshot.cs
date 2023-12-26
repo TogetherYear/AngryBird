@@ -75,7 +75,7 @@ public class TSlingshot : TSingleton<TSlingshot>
         pigs.Remove(pig);
         if (pigs.Count < 1)
         {
-            TGameManager.Instance.Success();
+            TGameManager.Instance.Success(birdIndex);
         }
     }
 

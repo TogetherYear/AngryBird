@@ -11,18 +11,46 @@ public class TGameManager : TSingleton<TGameManager>
         InitSetting();
     }
 
+    [SerializeField]
+    private TFinishUI finishUI;
+
+    [SerializeField]
+
+    private TPauseUI pauseUI;
+
     private void InitSetting()
     {
         Application.targetFrameRate = 144;
     }
 
-    public void Success()
+    public void Success(int number)
     {
-        Debug.Log("Success");
+        int start = Mathf.Clamp(3 - number, 1, 3);
+        finishUI.Success(start);
     }
 
     public void Failed()
     {
-        Debug.Log("Failed");
+        finishUI.Failed();
+    }
+
+    public void SetTimeScale(float scale)
+    {
+        Time.timeScale = scale;
+    }
+
+    public void RefreshCurrentLevel()
+    {
+
+    }
+
+    public void LoadMenuLevel()
+    {
+
+    }
+
+    public void LoadNextLevel()
+    {
+
     }
 }
