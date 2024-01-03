@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12477b78105d1cf469136dd6d694beaf, type: 3}
+  m_Name: TLevelSO
+  m_EditorClassIdentifier: 
+  levels:
+  - name: 
+    levelStart: 0
+    checkpoints:
+    - startCount: 1
+      prefab: {fileID: 6741316070560733110, guid: 913e852611d6a654d8c58ce209e68c53, type: 3}
+    - startCount: 2
+      prefab: {fileID: 2186793316037990166, guid: 22e302c8a4f1b84499a4c34ac65665d6, type: 3}
+    - startCount: 3
+      prefab: {fileID: 1552917686573522314, guid: 185ee01ac67e20a49be996b2d300068f, type: 3}
+    - startCount: 0
+      prefab: {fileID: 3613671770880809876, guid: dc11527c56c51584c8549f96065cb141, type: 3}
+    - startCount: 0
+      prefab: {fileID: 1801936138712776438, guid: ce5bcd3213e662d478a29f4a6c388011, type: 3}
+    currentCheckpoint: 3
+  - name: 
+    levelStart: 0
+    checkpoints: []
+    currentCheckpoint: 0
+  - name: 
+    levelStart: 0
+    checkpoints: []
+    currentCheckpoint: 0
+  - name: 
+    levelStart: 0
+    checkpoints: []
+    currentCheckpoint: 0
+  - name: 
+    levelStart: 0
+    checkpoints: []
+    currentCheckpoint: 0
+  - name: 
+    levelStart: 0
+    checkpoints: []
+    currentCheckpoint: 0
+  - name: 
+    levelStart: 0
+    checkpoints: []
+    currentCheckpoint: 0
+  totalStart: 0

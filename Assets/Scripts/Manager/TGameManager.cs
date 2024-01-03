@@ -11,6 +11,8 @@ public class TGameManager : TSingleton<TGameManager>
         InitSetting();
     }
 
+    public TLevelSO levelSO;
+
     [SerializeField]
     private TFinishUI finishUI;
 
@@ -18,9 +20,22 @@ public class TGameManager : TSingleton<TGameManager>
 
     private TPauseUI pauseUI;
 
+    [SerializeField]
+    private GameObject menu;
+
     private void InitSetting()
     {
         Application.targetFrameRate = 144;
+    }
+
+    public void ShowMenu()
+    {
+        menu.SetActive(true);
+    }
+
+    public void HideMenu()
+    {
+        menu.SetActive(false);
     }
 
     public void Success(int number)
