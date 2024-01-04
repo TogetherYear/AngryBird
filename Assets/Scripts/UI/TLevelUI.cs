@@ -36,6 +36,7 @@ public class TLevelUI : MonoBehaviour
 
     public void OnClick()
     {
+        TGameManager.Instance.SetLastLevel(currentLevel);
         TSelectUI.Instance.ShowCheckPoint(currentLevel);
     }
 }

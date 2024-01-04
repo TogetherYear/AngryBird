@@ -43,6 +43,6 @@ public class TCheckpointUI : MonoBehaviour
 
     public void OnClick()
     {
-
+        TGameManager.Instance.SetLastCheckpoint(current);
     }
 }

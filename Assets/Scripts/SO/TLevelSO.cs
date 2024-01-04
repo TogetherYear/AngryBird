@@ -8,6 +8,10 @@ public class TLevelSO : ScriptableObject
     public List<Level> levels = new List<Level>();
 
     public int totalStar;
+
+    public int lastSelectLevel;
+
+    public int lastSelectCheckpoint;
 }
 
 [Serializable]

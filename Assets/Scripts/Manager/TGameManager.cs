@@ -38,6 +38,16 @@ public class TGameManager : TSingleton<TGameManager>
         menu.SetActive(false);
     }
 
+    public void SetLastLevel(int select)
+    {
+        levelSO.lastSelectLevel = select;
+    }
+
+    public void SetLastCheckpoint(int select)
+    {
+        levelSO.lastSelectCheckpoint = select;
+    }
+
     public void Success(int number)
     {
         int star = Mathf.Clamp(3 - number, 1, 3);
