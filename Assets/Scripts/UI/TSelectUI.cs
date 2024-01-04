@@ -8,6 +8,8 @@ public class TSelectUI : TSingleton<TSelectUI>
 
     public GameObject checkpointUI;
 
+    public Transform checkpointParent;
+
     public List<TLevelUI> levels = new List<TLevelUI>();
 
     public List<TCheckpointUI> checkpoints = new List<TCheckpointUI>();
@@ -30,11 +32,11 @@ public class TSelectUI : TSingleton<TSelectUI>
 
     public void RefreshCheckpoint(int selectLevel)
     {
-        if (checkpointUI.transform.childCount > 0)
+        if (checkpointParent.childCount > 0)
         {
-            for (int i = 0; i < checkpointUI.transform.childCount; i++)
+            for (int i = 0; i < checkpointParent.childCount; i++)
             {
-                Destroy(checkpointUI.transform.GetChild(i).gameObject);
+                Destroy(checkpointParent.GetChild(i).gameObject);
             }
         }
         checkpoints.Clear();
@@ -44,7 +46,7 @@ public class TSelectUI : TSingleton<TSelectUI>
             checkpoints.Add(cp);
             cp.SetDefaultValues(i);
             cp.Show(TGameManager.Instance.levelSO.levels[selectLevel].currentCheckpoint, TGameManager.Instance.levelSO.levels[selectLevel].checkpoints[i].starCount);
-            cp.transform.SetParent(checkpointUI.transform);
+            cp.transform.SetParent(checkpointParent);
         }
     }
 
@@ -61,4 +63,10 @@ public class TSelectUI : TSingleton<TSelectUI>
         checkpointUI.SetActive(true);
         RefreshCheckpoint(selectLevel);
     }
+
+    public void OnBackClick()
+    {
+        ShowLevel();
+    }
+
 }

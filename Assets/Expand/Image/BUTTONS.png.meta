@@ -220,13 +220,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BUTTONS_4
+      name: Back
       rect:
         serializedVersion: 2
-        x: 0
-        y: 545
-        width: 121
-        height: 143
+        x: 288
+        y: 225
+        width: 91
+        height: 81
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,9 +476,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 294
+        y: 326
         width: 437
-        height: 159
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -667,7 +667,7 @@ TextureImporter:
         x: 285
         y: 26
         width: 97
-        height: 280
+        height: 182
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1186,7 +1186,6 @@ TextureImporter:
       BUTTONS_37: 1967858464
       BUTTONS_38: -300074616
       BUTTONS_39: -1409321529
-      BUTTONS_4: 1776566680
       BUTTONS_40: -1728181865
       BUTTONS_41: -1746647018
       BUTTONS_42: -1427354809
@@ -1197,6 +1196,7 @@ TextureImporter:
       BUTTONS_7: 604635300
       BUTTONS_8: 98895629
       BUTTONS_9: 1853941729
+      Back: 1776566680
       Level: 583984808
       Menu: 1136352849
       Next: -466261190

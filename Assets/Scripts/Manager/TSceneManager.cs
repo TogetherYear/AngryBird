@@ -97,7 +97,7 @@ public class TSceneManager : TSingleton<TSceneManager>
     /// <param name="Enter">是否加载完成后自动进入</param>
     /// <param name="OnFinish">加载完成后回调</param>
     /// <param name="autoEnter">是否自动进入</param>
-    public void LoadScene(TSceneKey key, Action OnFinish, bool autoEnter)
+    public void LoadSceneAsync(TSceneKey key, Action OnFinish, bool autoEnter)
     {
         String name = GetNameByKey(key);
         if (name == currentSceneName)
@@ -107,6 +107,19 @@ public class TSceneManager : TSingleton<TSceneManager>
         else
         {
             StartCoroutine(SwitchScene(name, OnFinish, autoEnter));
+        }
+    }
+
+    public void LoadScene(TSceneKey key)
+    {
+        String name = GetNameByKey(key);
+        if (name == currentSceneName)
+        {
+            Debug.Log("不可加载同场景！");
+        }
+        else
+        {
+            SceneManager.LoadScene(name);
         }
     }
 }
@@ -125,7 +138,9 @@ public class TSceneEntity
 public enum TSceneKey
 {
     None,
+    Start,
     Game,
+    LevelSelect,
 }
 
 public enum TSwitchSceneStatus

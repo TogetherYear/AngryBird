@@ -143,11 +143,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   at: {fileID: 5175177604209356823}
-  currentSceneName: Game
+  currentSceneName: 
   percent: {fileID: 3862752245537437143}
   scenes:
-  - name: Game
+  - name: Start
     key: 1
+  - name: Game
+    key: 2
+  - name: LevelSelect
+    key: 3
 --- !u!114 &662469414336873942
 MonoBehaviour:
   m_ObjectHideFlags: 0
