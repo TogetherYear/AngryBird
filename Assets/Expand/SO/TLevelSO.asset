@@ -52,3 +52,5 @@ MonoBehaviour:
     checkpoints: []
     currentCheckpoint: 0
   totalStar: 7
+  lastSelectLevel: 0
+  lastSelectCheckpoint: 0

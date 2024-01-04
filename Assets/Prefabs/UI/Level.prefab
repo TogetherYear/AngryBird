@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a524ab0604103ed47b1d9705f6909c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockStartCount: 0
+  lockStarCount: 0
   button: {fileID: 2208023062216379516}
   background: {fileID: 5613918053631632159}
   lockUI: {fileID: 1963137104763354088}
@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7973923, g: 0.914906, b: 0.9339623, a: 1}
-    m_PressedColor: {r: 0.8, g: 0.91764706, b: 0.9372549, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.7637823, b: 0.5896226, a: 1}
+    m_PressedColor: {r: 1, g: 0.7647059, b: 0.5921569, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1

@@ -17,15 +17,12 @@ public class TCheckpointUI : MonoBehaviour
 
     public Text text;
 
-    public Button button;
-
     public void Show(int pass, int starCount)
     {
         if (current > pass)
         {
             lockUI.SetActive(true);
             unLockUI.SetActive(false);
-            button.enabled = false;
         }
         else
         {
