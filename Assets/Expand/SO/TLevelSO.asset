@@ -13,42 +13,42 @@ MonoBehaviour:
   m_Name: TLevelSO
   m_EditorClassIdentifier: 
   levels:
-  - name: 
-    levelStart: 0
+  - name: "\u65B0\u624B\u8BAD\u7EC3"
+    levelStar: 7
     checkpoints:
-    - startCount: 1
+    - starCount: 3
       prefab: {fileID: 6741316070560733110, guid: 913e852611d6a654d8c58ce209e68c53, type: 3}
-    - startCount: 2
+    - starCount: 2
       prefab: {fileID: 2186793316037990166, guid: 22e302c8a4f1b84499a4c34ac65665d6, type: 3}
-    - startCount: 3
+    - starCount: 1
       prefab: {fileID: 1552917686573522314, guid: 185ee01ac67e20a49be996b2d300068f, type: 3}
-    - startCount: 0
+    - starCount: 1
       prefab: {fileID: 3613671770880809876, guid: dc11527c56c51584c8549f96065cb141, type: 3}
-    - startCount: 0
+    - starCount: 0
       prefab: {fileID: 1801936138712776438, guid: ce5bcd3213e662d478a29f4a6c388011, type: 3}
     currentCheckpoint: 3
   - name: 
-    levelStart: 0
+    levelStar: 0
     checkpoints: []
     currentCheckpoint: 0
   - name: 
-    levelStart: 0
+    levelStar: 0
     checkpoints: []
     currentCheckpoint: 0
   - name: 
-    levelStart: 0
+    levelStar: 0
     checkpoints: []
     currentCheckpoint: 0
   - name: 
-    levelStart: 0
+    levelStar: 0
     checkpoints: []
     currentCheckpoint: 0
   - name: 
-    levelStart: 0
+    levelStar: 0
     checkpoints: []
     currentCheckpoint: 0
   - name: 
-    levelStart: 0
+    levelStar: 0
     checkpoints: []
     currentCheckpoint: 0
-  totalStart: 0
+  totalStar: 7

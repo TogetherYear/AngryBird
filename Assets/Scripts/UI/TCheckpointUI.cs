@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TCheckpointUI : MonoBehaviour
 {
-    public List<Sprite> starts;
+    public List<Sprite> stars;
 
     public int current;
 
@@ -13,13 +13,13 @@ public class TCheckpointUI : MonoBehaviour
 
     public GameObject unLockUI;
 
-    public Image startUI;
+    public Image starUI;
 
     public Text text;
 
     public Button button;
 
-    public void Show(int pass, int startCount)
+    public void Show(int pass, int starCount)
     {
         if (current > pass)
         {
@@ -32,7 +32,7 @@ public class TCheckpointUI : MonoBehaviour
             lockUI.SetActive(false);
             unLockUI.SetActive(true);
             text.text = $"{current + 1}";
-            startUI.sprite = starts[Mathf.Clamp(startCount, 0, 3)];
+            starUI.sprite = stars[Mathf.Clamp(starCount, 0, 3)];
         }
     }
 

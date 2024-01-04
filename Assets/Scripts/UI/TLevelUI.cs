@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TLevelUI : MonoBehaviour
 {
-    public int lockStartCount = 10;
+    public int lockStarCount = 10;
 
     public Button button;
 
@@ -17,13 +17,13 @@ public class TLevelUI : MonoBehaviour
 
     public int currentLevel;
 
-    public void Show(int startCount)
+    public void Show(int starCount)
     {
-        if (startCount < lockStartCount)
+        if (starCount < lockStarCount)
         {
             button.enabled = false;
             lockUI.SetActive(true);
-            text.text = $"{lockStartCount}";
+            text.text = $"{lockStarCount}";
             background.color = new Color(0.56f, 0.56f, 0.56f, 1.0f);
         }
         else

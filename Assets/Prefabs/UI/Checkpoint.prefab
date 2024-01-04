@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21768fd12236e24bb5943f994cfdcac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starts:
+  stars:
   - {fileID: 1444757677, guid: 08aaa648c1d8568438c69a7f334504f0, type: 3}
   - {fileID: 143416160, guid: 08aaa648c1d8568438c69a7f334504f0, type: 3}
   - {fileID: 460347263, guid: 08aaa648c1d8568438c69a7f334504f0, type: 3}
@@ -155,7 +155,7 @@ MonoBehaviour:
   current: 1
   lockUI: {fileID: 7548698285698338542}
   unLockUI: {fileID: 2298927209633764360}
-  startUI: {fileID: 2095032878922504214}
+  starUI: {fileID: 2095032878922504214}
   text: {fileID: 5552188372144971454}
   button: {fileID: 7440584297236181351}
 --- !u!1 &2298927209633764360

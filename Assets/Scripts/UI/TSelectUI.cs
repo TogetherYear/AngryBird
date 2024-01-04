@@ -24,7 +24,7 @@ public class TSelectUI : TSingleton<TSelectUI>
     {
         foreach (TLevelUI l in levels)
         {
-            l.Show(TGameManager.Instance.levelSO.totalStart);
+            l.Show(TGameManager.Instance.levelSO.totalStar);
         }
     }
 
@@ -43,7 +43,7 @@ public class TSelectUI : TSingleton<TSelectUI>
             TCheckpointUI cp = Instantiate(checkpointPrefab).GetComponent<TCheckpointUI>();
             checkpoints.Add(cp);
             cp.SetDefaultValues(i);
-            cp.Show(TGameManager.Instance.levelSO.levels[selectLevel].currentCheckpoint, TGameManager.Instance.levelSO.levels[selectLevel].checkpoints[i].startCount);
+            cp.Show(TGameManager.Instance.levelSO.levels[selectLevel].currentCheckpoint, TGameManager.Instance.levelSO.levels[selectLevel].checkpoints[i].starCount);
             cp.transform.SetParent(checkpointUI.transform);
         }
     }

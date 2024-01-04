@@ -40,8 +40,8 @@ public class TGameManager : TSingleton<TGameManager>
 
     public void Success(int number)
     {
-        int start = Mathf.Clamp(3 - number, 1, 3);
-        finishUI.Success(start);
+        int star = Mathf.Clamp(3 - number, 1, 3);
+        finishUI.Success(star);
     }
 
     public void Failed()

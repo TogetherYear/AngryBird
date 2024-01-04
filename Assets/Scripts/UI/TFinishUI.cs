@@ -8,7 +8,7 @@ public class TFinishUI : MonoBehaviour
     private Animator at;
 
     [SerializeField]
-    private CanvasGroup[] starts;
+    private CanvasGroup[] stars;
 
     public void Success(int number)
     {
