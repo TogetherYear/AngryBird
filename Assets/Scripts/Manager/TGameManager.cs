@@ -59,6 +59,12 @@ public class TGameManager : TSingleton<TGameManager>
         finishUI.Failed();
     }
 
+    public void LoadSelectCheckpoint()
+    {
+        ShowMenu();
+        TSceneManager.Instance.LoadScene(TSceneKey.Game);
+    }
+
     public void SetTimeScale(float scale)
     {
         Time.timeScale = scale;

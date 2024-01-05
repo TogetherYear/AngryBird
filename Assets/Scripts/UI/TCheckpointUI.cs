@@ -41,7 +41,6 @@ public class TCheckpointUI : MonoBehaviour
     public void OnClick()
     {
         TGameManager.Instance.SetLastCheckpoint(current);
-        TSceneManager.Instance.LoadScene(TSceneKey.Game);
-        TGameManager.Instance.ShowMenu();
+        TGameManager.Instance.LoadSelectCheckpoint();
     }
 }

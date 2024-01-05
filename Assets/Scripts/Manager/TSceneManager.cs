@@ -10,7 +10,7 @@ public class TSceneManager : TSingleton<TSceneManager>
     [SerializeField]
     private Animator at;
 
-    public String currentSceneName;
+    public string currentSceneName;
 
     public Text percent;
 
@@ -39,13 +39,13 @@ public class TSceneManager : TSingleton<TSceneManager>
         percent.text = "0.0%";
     }
 
-    private String GetNameByKey(TSceneKey key)
+    private string GetNameByKey(TSceneKey key)
     {
         var s = scenes.Find(s => s.key == key);
-        return s != null ? s.name : "";
+        return s?.name ?? scenes[0].name;
     }
 
-    private IEnumerator SwitchScene(String name, Action OnFinish, bool autoEnter)
+    private IEnumerator SwitchScene(string name, Action OnFinish, bool autoEnter)
     {
         ShowCanvas();
         currentSceneName = name;
@@ -99,36 +99,50 @@ public class TSceneManager : TSingleton<TSceneManager>
     /// <param name="autoEnter">是否自动进入</param>
     public void LoadSceneAsync(TSceneKey key, Action OnFinish, bool autoEnter)
     {
-        String name = GetNameByKey(key);
-        if (name == currentSceneName)
+        var (v, n) = VerifyScene(key);
+        if (v)
         {
-            Debug.Log("不可加载同场景！");
-        }
-        else
-        {
-            StartCoroutine(SwitchScene(name, OnFinish, autoEnter));
+            StartCoroutine(SwitchScene(n, OnFinish, autoEnter));
         }
     }
 
     public void LoadScene(TSceneKey key)
     {
-        String name = GetNameByKey(key);
-        if (name == currentSceneName)
+        var (v, n) = VerifyScene(key);
+        if (v)
         {
-            Debug.Log("不可加载同场景！");
+            SceneManager.LoadScene(n);
+        }
+    }
+
+    private (bool, string) VerifyScene(TSceneKey key)
+    {
+        if (scenes.Count == 0)
+        {
+            Debug.Log("请先配置场景！");
+            return (false, string.Empty);
         }
         else
         {
-            SceneManager.LoadScene(name);
+            string name = GetNameByKey(key);
+            if (name == currentSceneName)
+            {
+                Debug.Log("不可加载同场景！");
+                return (false, name);
+            }
+            else
+            {
+                return (true, name);
+            }
         }
     }
 }
 
-[System.Serializable]
+[Serializable]
 public class TSceneEntity
 {
     [Tooltip("关卡名称")]
-    public String name;
+    public string name;
 
     [Tooltip("关卡枚举")]
     public TSceneKey key;
