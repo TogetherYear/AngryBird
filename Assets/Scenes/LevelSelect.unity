@@ -136,6 +136,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1960649242351228273, guid: 7d02304859554d44890aaacbe877ff49, type: 3}
+      propertyPath: lockStarCount
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960649242351228273, guid: 7d02304859554d44890aaacbe877ff49, type: 3}
       propertyPath: lockStartCount
       value: 10
       objectReference: {fileID: 0}
