@@ -35,4 +35,11 @@ public class TFinishUI : MonoBehaviour
     {
         TGameManager.Instance.LoadNextLevel();
     }
+
+    public void Reset()
+    {
+        at.SetBool("Success", false);
+        at.SetBool("Failed", false);
+        at.SetInteger("Number", 0);
+    }
 }

@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   at: {fileID: 5175177604209356823}
-  currentSceneName: 
+  currentSceneName: Start
   percent: {fileID: 3862752245537437143}
   scenes:
   - name: Start

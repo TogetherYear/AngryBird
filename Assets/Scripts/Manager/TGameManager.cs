@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TGameManager : TSingleton<TGameManager>
 {
@@ -52,6 +53,7 @@ public class TGameManager : TSingleton<TGameManager>
     {
         int star = Mathf.Clamp(3 - number, 1, 3);
         finishUI.Success(star);
+        UpdateCurrentCheckpointStart(star);
     }
 
     public void Failed()
@@ -72,16 +74,38 @@ public class TGameManager : TSingleton<TGameManager>
 
     public void RefreshCurrentLevel()
     {
-
+        TSceneManager.Instance.RefreshCurrentScene();
+        ResetUI();
     }
 
     public void LoadMenuLevel()
     {
-
+        TSceneManager.Instance.LoadScene(TSceneKey.LevelSelect);
+        ResetUI();
     }
 
     public void LoadNextLevel()
     {
+        levelSO.lastSelectCheckpoint = Mathf.Clamp(levelSO.lastSelectCheckpoint + 1, 0, levelSO.levels[levelSO.lastSelectLevel].currentCheckpoint);
+        TSceneManager.Instance.RefreshCurrentScene();
+        ResetUI();
+    }
 
+    private void ResetUI()
+    {
+        pauseUI.Reset();
+        finishUI.Reset();
+    }
+
+    public void UpdateCurrentCheckpointStart(int starCount)
+    {
+        int delta = Mathf.Max(0, starCount - levelSO.levels[levelSO.lastSelectLevel].checkpoints[levelSO.lastSelectCheckpoint].starCount);
+        levelSO.levels[levelSO.lastSelectLevel].checkpoints[levelSO.lastSelectCheckpoint].starCount += delta;
+        levelSO.levels[levelSO.lastSelectLevel].levelStar += delta;
+        levelSO.totalStar += delta;
+        if (levelSO.levels[levelSO.lastSelectLevel].currentCheckpoint == levelSO.lastSelectCheckpoint)
+        {
+            levelSO.levels[levelSO.lastSelectLevel].currentCheckpoint = Mathf.Clamp(levelSO.levels[levelSO.lastSelectLevel].currentCheckpoint + 1, 0, levelSO.levels[levelSO.lastSelectLevel].checkpoints.Count - 1);
+        }
     }
 }

@@ -30,4 +30,10 @@ public class TPauseUI : MonoBehaviour
         TGameManager.Instance.LoadMenuLevel();
     }
 
+    public void Reset()
+    {
+        at.SetBool("Show", false);
+        TGameManager.Instance.SetTimeScale(1.0f);
+    }
+
 }
